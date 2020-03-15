@@ -1,0 +1,21 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/serpent-demo-scifi
+serpent-demo-scifi.so
+serpent-demo-scifi.dylib
+serpent-demo-scifi.dll
+serpent-demo-scifi.a
+serpent-demo-scifi.lib
+serpent-demo-scifi-test-*
+*.exe
+*.o
+*.obj
+*.lst
+dub.selections.json
+
+# Caused by autoformat
+*.d.orig
+
+/bin/
