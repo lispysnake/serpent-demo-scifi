@@ -26,7 +26,6 @@ import serpent;
 import std.stdio : writeln, writefln;
 import std.exception;
 import bindbc.sdl;
-import serpent.tiled;
 import std.format;
 import std.datetime;
 

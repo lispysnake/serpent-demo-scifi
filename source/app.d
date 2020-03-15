@@ -27,7 +27,6 @@ import serpent.graphics.sprite;
 import serpent.graphics.pipeline.info;
 import std.stdio : writeln, writefln;
 
-import serpent.tiled;
 import std.algorithm.searching : endsWith;
 
 /**
