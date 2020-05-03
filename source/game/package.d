@@ -56,6 +56,7 @@ private:
     EntityID player;
     EntityID ship;
     EntityID explosion;
+    EntityID splash;
     SpriteAnimation explosionAnim;
     SpriteAnimation playerAnim;
     SpriteAnimation shipAnim;
@@ -225,6 +226,20 @@ private:
         s.camera.clamp(bounds, viewport);
     }
 
+    final EntityID spawnSplash(View!ReadWrite view)
+    {
+        auto entityID = view.createEntity();
+        auto texture = new Texture("assets/splash.png", TextureFilter.MagPoint);
+        auto sprite = SpriteComponent();
+        auto trans = TransformComponent();
+        trans.position.z = 0.9f;
+        sprite.texture = texture;
+        view.addComponent(entityID, sprite);
+        view.addComponent(entityID, trans);
+
+        return entityID;
+    }
+
 public:
 
     /**
@@ -258,6 +273,8 @@ public:
         shipAnim = createShipAnimation();
         ship = createShip(initView, &shipAnim);
         bugAnim = createBugAnimation();
+
+        splash = spawnSplash(initView);
 
         return true;
     }
